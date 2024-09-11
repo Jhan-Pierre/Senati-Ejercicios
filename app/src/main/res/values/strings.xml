@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Senati</string>
+    <string name="title_ejercicios">Ejercicios SENATI</string>
+    <string name="btn_ejercicio_1">Ejercicio 1</string>
+    <string name="btn_ejercicio_2">Ejercicio 2</string>
+    <string name="btn_ejercicio_3">Ejercicio 3</string>
+    <string name="btn_ejercicio_4">Ejercicio 4</string>
+    <string name="btn_ejercicio_5">Ejercicio 5</string>
+    <string name="author_name">Autor: JhanDev</string>
+    <string name="titulo_ejercicio">Ejercicio Nº 1</string>
+    <string name="problema_ejercicio">Desarrollar un programa en Java para móviles en la plataforma Android que permita calcular la remuneración del empleado. Ingrese el básico, número de hijos y cargo; si su cargo es obrero [O] recibirá 100 por Bonificación, si su cargo es empleado [E] recibirá una Bonificación de 120. Si tiene hijos recibirá por cada uno 41 soles por concepto de Asignación. El total será la suma del básico, bonificación y Asignación.</string>
+    <string name="solucion_texto">SOLUCIÓN:</string>
+    <string name="hint_salario_basico">Ingrese salario básico</string>
+    <string name="hint_numero_hijos">Ingrese número de hijos</string>
+    <string name="checkbox_obrero">Obrero</string>
+    <string name="checkbox_empleado">Empleado</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="resultado_texto">Sueldo básico: \nNº de hijos: \nCargo: \nSueldo Total: </string>
+    <string name="btn_regresar">Regresar</string>
+</resources>

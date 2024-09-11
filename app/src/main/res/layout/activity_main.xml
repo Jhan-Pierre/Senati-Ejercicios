@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/color2">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_ejercicios"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/color5"
+        android:layout_gravity="center"
+        android:paddingBottom="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnEjercicio1"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="@string/btn_ejercicio_1"
+            android:textSize="18sp"
+            android:background="@color/button_background"
+            android:textColor="@color/button_text"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnEjercicio2"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="@string/btn_ejercicio_2"
+            android:textSize="18sp"
+            android:background="@color/button_background"
+            android:textColor="@color/button_text"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnEjercicio3"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="@string/btn_ejercicio_3"
+            android:textSize="18sp"
+            android:background="@color/button_background"
+            android:textColor="@color/button_text"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnEjercicio4"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="@string/btn_ejercicio_4"
+            android:textSize="18sp"
+            android:background="@color/button_background"
+            android:textColor="@color/button_text"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnEjercicio5"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="@string/btn_ejercicio_5"
+            android:textSize="18sp"
+            android:background="@color/button_background"
+            android:textColor="@color/button_text"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author_name"
+        android:textSize="16sp"
+        android:textColor="@color/color5"
+        android:layout_gravity="center"
+        android:paddingTop="24dp"/>
+
+</LinearLayout>
