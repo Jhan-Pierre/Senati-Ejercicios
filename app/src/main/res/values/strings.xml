@@ -18,4 +18,8 @@
     <string name="btn_calcular">Calcular</string>
     <string name="resultado_texto">Sueldo básico: \nNº de hijos: \nCargo: \nSueldo Total: </string>
     <string name="btn_regresar">Regresar</string>
+    <string name="titulo_ejercicio_2">Ejercicio Nº 2</string>
+    <string name="problema_ejercicio_2">Desarrollar un programa para calcular la comisión total que recibe un vendedor según su monto de ventas.</string>
+    <string name="hint_monto_ventas">Ingrese monto de ventas</string>
+    <string name="resultado_comision">Comisión total: </string>
 </resources>
