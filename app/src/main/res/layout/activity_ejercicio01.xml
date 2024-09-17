@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color4"
     tools:context=".Ejercicios.Ejercicio01">
 
     <!-- Título -->
@@ -30,9 +29,6 @@
         android:text="@string/problema_ejercicio"
         android:textSize="16sp"
         android:textColor="@color/color1"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,11 +43,10 @@
         android:textSize="20sp"
         android:textColor="@color/color1"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintTop_toBottomOf="@id/tvProblema"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="16dp"/>
+        android:layout_margin="16dp"/>
 
     <!-- Campo para el Salario Básico -->
     <EditText
@@ -60,13 +55,10 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint_salario_basico"
         android:inputType="numberDecimal"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintTop_toBottomOf="@id/tvSolucion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp"/>
+        android:layout_margin="16dp"/>
 
     <!-- Campo para el Número de Hijos -->
     <EditText
@@ -75,13 +67,10 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint_numero_hijos"
         android:inputType="number"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintTop_toBottomOf="@id/etSalarioBasico"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp"/>
+        android:layout_margin="16dp"/>
 
     <!-- RadioGroup para seleccionar el cargo -->
     <RadioGroup

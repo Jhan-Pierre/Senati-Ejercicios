@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color4"
     tools:context=".Ejercicios.Ejercicio02">
 
     <!-- Título -->
@@ -30,13 +29,24 @@
         android:text="@string/problema_ejercicio_2"
         android:textSize="16sp"
         android:textColor="@color/color1"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp"/>
+        android:layout_margin="16dp"/>
+
+    <!-- Texto SOLUCIÓN -->
+    <TextView
+        android:id="@+id/tvSolucion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/solucion_texto"
+        android:textSize="20sp"
+        android:textColor="@color/color1"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvProblema"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
 
     <!-- Campo para el Monto de Ventas -->
     <EditText
@@ -45,13 +55,10 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint_monto_ventas"
         android:inputType="numberDecimal"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvProblema"
+        app:layout_constraintTop_toBottomOf="@id/tvSolucion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp"/>
+        android:layout_margin="16dp"/>
 
     <!-- Botón Calcular -->
     <Button
