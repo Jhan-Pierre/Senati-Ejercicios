@@ -30,4 +30,17 @@
     <string name="checkbox_barnizado">Barnizado</string>
     <string name="titulo_ejercicio_4">Ejercicio Nº 4</string>
     <string name="problema_ejercicio_4">Aplicación que permita calcular el sueldo de un empleado. Ingrese el salario básico y el cargo. \nLeyenda:\n[B]Bonificación\n[A]Asignación\n[R]Refrigerio \nCargos: \nObrero = [B] S/.100; [A] S/.120. \nEmpleado = [B] S/.120; [A] S/.150 y [R] S/.200. \nEjecutivo = [B] S/.250; [R] S/.250 y [A] S/.500</string>
+    <string-array name="marcas">
+        <item>Nike</item>
+        <item>Adidas</item>
+        <item>Fila</item>
+    </string-array>
+    <string-array name="tallas">
+        <item>38</item>
+        <item>40</item>
+        <item>42</item>
+    </string-array>
+    <string name="titulo_ejercicio_5">Ejercicio Nº 5</string>
+    <string name="problema_ejercicio_5">Aplicación que permita calcular el precio de un calzado.\nPrecios: \nNike: \n(38 = S/.150.00) (40 = S/.160.00) (42 = S/.160.00) \nAdidas: \n(38 = S/.140.00) (40 = S/.150.00) (42 = S/.150.00) \nFila: \n(38 = S/. 80.00) (40 = S/. 85.00) (42 = S/. 90.00) \nDescuentos: \n(2 a 5) = 5% \n(6 a 10) = 8% \n(11 a 20) = 10% \n(Mas de 20) = 15%</string>
+    <string name="hint_cantidad_pares">Ingrese cantidad de pares</string>
 </resources>
