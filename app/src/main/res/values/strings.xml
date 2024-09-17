@@ -9,17 +9,15 @@
     <string name="btn_ejercicio_5">Ejercicio 5</string>
     <string name="author_name">Autor: JhanDev</string>
     <string name="titulo_ejercicio">Ejercicio Nº 1</string>
-    <string name="problema_ejercicio">Desarrollar un programa en Java para móviles en la plataforma Android que permita calcular la remuneración del empleado. Ingrese el básico, número de hijos y cargo; si su cargo es obrero [O] recibirá 100 por Bonificación, si su cargo es empleado [E] recibirá una Bonificación de 120. Si tiene hijos recibirá por cada uno 41 soles por concepto de Asignación. El total será la suma del básico, bonificación y Asignación.</string>
+    <string name="problema_ejercicio">Aplicación que permita calcular la remuneración del empleado. Ingrese el básico, número de hijos y cargo: \nBonificaciónes: \n Si su cargo es obrero recibirá S/.100.00\n Si su cargo es empleado recibirá S/.120.00 \n Por cada hijo recibirá S/.41.00</string>
     <string name="solucion_texto">SOLUCIÓN:</string>
     <string name="hint_salario_basico">Ingrese salario básico</string>
     <string name="hint_numero_hijos">Ingrese número de hijos</string>
     <string name="checkbox_obrero">Obrero</string>
     <string name="checkbox_empleado">Empleado</string>
     <string name="btn_calcular">Calcular</string>
-    <string name="resultado_texto">Sueldo básico: \nNº de hijos: \nCargo: \nSueldo Total: </string>
     <string name="btn_regresar">Regresar</string>
     <string name="titulo_ejercicio_2">Ejercicio Nº 2</string>
-    <string name="problema_ejercicio_2">Desarrollar un programa para calcular la comisión total que recibe un vendedor según su monto de ventas.</string>
+    <string name="problema_ejercicio_2">Aplicacion que permite calcular la comision total de un vendedor dependiendo de su monto de ventas. \nComisiones: \n Menor a S/.10000.00 = 5% \n Entre S/.10000.00 y S/.50000.00 = 7.5% + S/.200.00 \n Mayor a S/.50000.00 = 9% + S/.300.00</string>
     <string name="hint_monto_ventas">Ingrese monto de ventas</string>
-    <string name="resultado_comision">Comisión total: </string>
 </resources>

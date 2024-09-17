@@ -67,22 +67,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="12dp"/>
 
-    <!-- Resultado -->
-    <TextView
-        android:id="@+id/tvResultado"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/resultado_comision"
-        android:textSize="16sp"
-        android:textColor="@color/color1"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@id/btnCalcular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp"/>
-
     <!-- Botón Regresar -->
     <Button
         android:id="@+id/btnRegresar"
@@ -92,7 +76,7 @@
         android:textColor="@color/color5"
         android:backgroundTint="@color/color2"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/tvResultado"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="12dp"/>

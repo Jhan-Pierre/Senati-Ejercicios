@@ -1,19 +1,20 @@
 package com.example.senati.Ejercicios
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.senati.MainActivity
 import com.example.senati.R
 
 class Ejercicio02 : AppCompatActivity() {
 
     private lateinit var etMontoVentas: EditText
-    private lateinit var tvResultado: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +25,18 @@ class Ejercicio02 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         etMontoVentas = findViewById(R.id.etMontoVentas)
-        tvResultado = findViewById(R.id.tvResultado)
         val btnCalcular: Button = findViewById(R.id.btnCalcular)
+        val btnRegresar = findViewById<Button>(R.id.btnRegresar)
 
         btnCalcular.setOnClickListener {
             calcularComision()
+        }
+
+        btnRegresar.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 
@@ -55,9 +62,32 @@ class Ejercicio02 : AppCompatActivity() {
             }
 
             val total = comision + bonificacion
-            tvResultado.text = "Comisión total: $total"
+            mostrarResultadoEnModal(total)
+            limpiarCampo()
         } else {
-            tvResultado.text = "Ingrese el monto de ventas"
+            mostrarResultadoEnModal(null)
         }
+    }
+
+    private fun mostrarResultadoEnModal(total: Double?) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Resultado del Cálculo")
+
+        if (total != null) {
+            builder.setMessage("Comisión total: $total")
+        } else {
+            builder.setMessage("Ingrese el monto de ventas")
+        }
+
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun limpiarCampo() {
+        etMontoVentas.text.clear()
     }
 }

@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -28,39 +28,23 @@ class Ejercicio01 : AppCompatActivity() {
         val etNumeroHijos = findViewById<EditText>(R.id.etNumeroHijos)
         val rgCargo = findViewById<RadioGroup>(R.id.rgCargo)
         val btnCalcular = findViewById<Button>(R.id.btnCalcular)
-        val tvResultado = findViewById<TextView>(R.id.tvResultado)
         val btnRegresar = findViewById<Button>(R.id.btnRegresar)
 
         btnCalcular.setOnClickListener {
-            val salarioBasico = etSalarioBasico.text.toString().toFloatOrNull() ?: 0f
-            val numeroHijos = etNumeroHijos.text.toString().toIntOrNull() ?: 0
+            val salarioBasicoStr = etSalarioBasico.text.toString()
+            val numeroHijosStr = etNumeroHijos.text.toString()
             val selectedCargoId = rgCargo.checkedRadioButtonId
-            val cargo = when (selectedCargoId) {
-                R.id.rbObrero -> "Obrero"
-                R.id.rbEmpleado -> "Empleado"
-                else -> "No especificado"
+
+            if (salarioBasicoStr.isEmpty() || numeroHijosStr.isEmpty() || selectedCargoId == -1) {
+                mostrarResultadoEnDialogo("Complete todos los campos")
+            } else {
+                val salarioBasico = salarioBasicoStr.toFloatOrNull() ?: 0f
+                val numeroHijos = numeroHijosStr.toIntOrNull() ?: 0
+                val resultado = calcularSalario(salarioBasico, numeroHijos, selectedCargoId)
+                mostrarResultadoEnDialogo(resultado)
+
+                limpiarCampos(etSalarioBasico, etNumeroHijos, rgCargo)
             }
-
-            val bonificacion = when (cargo) {
-                "Obrero" -> 100f
-                "Empleado" -> 120f
-                else -> 0f
-            }
-            val asignacion = numeroHijos * 41f
-            val sueldoTotal = salarioBasico + bonificacion + asignacion
-
-            tvResultado.text = """
-                SOLUCIÓN:
-                Sueldo básico: $salarioBasico
-                Nº de hijos: $numeroHijos
-                Cargo: $cargo
-                Sueldo Total: $sueldoTotal
-            """.trimIndent()
-
-            // Limpiar los campos después de mostrar el resultado
-            etSalarioBasico.text.clear()
-            etNumeroHijos.text.clear()
-            rgCargo.clearCheck()
         }
 
         btnRegresar.setOnClickListener {
@@ -68,4 +52,47 @@ class Ejercicio01 : AppCompatActivity() {
             finish()
         }
     }
+
+    private fun calcularSalario(salarioBasico: Float, numeroHijos: Int, selectedCargoId: Int): String {
+        val cargo = when (selectedCargoId) {
+            R.id.rbObrero -> "Obrero"
+            R.id.rbEmpleado -> "Empleado"
+            else -> "No especificado"
+        }
+
+        val bonificacion = when (cargo) {
+            "Obrero" -> 100f
+            "Empleado" -> 120f
+            else -> 0f
+        }
+        val asignacion = numeroHijos * 41f
+        val sueldoTotal = salarioBasico + bonificacion + asignacion
+
+        return """
+            Sueldo básico: $salarioBasico
+            Nº de hijos: $numeroHijos
+            Cargo: $cargo
+            Sueldo Total: $sueldoTotal
+        """.trimIndent()
+    }
+
+    private fun mostrarResultadoEnDialogo(resultado: String) {
+        // Crear y mostrar un AlertDialog con el resultado
+        AlertDialog.Builder(this)
+            .setTitle("Resultado del Cálculo")
+            .setMessage(resultado)
+            .setPositiveButton("OK") { dialog, _ ->
+                dialog.dismiss() // Cerrar el modal
+            }
+            .create()
+            .show()
+    }
+
+    private fun limpiarCampos(etSalarioBasico: EditText, etNumeroHijos: EditText, rgCargo: RadioGroup) {
+        etSalarioBasico.text.clear()
+        etNumeroHijos.text.clear()
+        rgCargo.clearCheck()
+    }
 }
+
+
