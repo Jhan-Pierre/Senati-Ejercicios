@@ -66,6 +66,7 @@ class Ejercicio03 : AppCompatActivity() {
             val totalJornal = jornalSemanal + jornalExtra
 
             mostrarResultadoEnModal(nombreObrero, jornalSemanal, jornalExtra, totalJornal)
+            limpiarCampos()
         } else {
             mostrarResultadoEnModal(nombreObrero, null, null, null)
         }
@@ -87,5 +88,11 @@ class Ejercicio03 : AppCompatActivity() {
 
         val dialog: AlertDialog = builder.create()
         dialog.show()
+    }
+
+    private fun limpiarCampos() {
+        etNombreObrero.text.clear()
+        etHorasTrabajadas.text.clear()
+        rgTipoActividad.clearCheck()
     }
 }

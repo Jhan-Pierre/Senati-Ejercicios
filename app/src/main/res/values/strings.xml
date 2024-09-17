@@ -15,6 +15,7 @@
     <string name="hint_numero_hijos">Ingrese número de hijos</string>
     <string name="checkbox_obrero">Obrero</string>
     <string name="checkbox_empleado">Empleado</string>
+    <string name="checkbox_ejecutivo">Ejecutivo</string>
     <string name="btn_calcular">Calcular</string>
     <string name="btn_regresar">Regresar</string>
     <string name="titulo_ejercicio_2">Ejercicio Nº 2</string>
@@ -22,4 +23,11 @@
     <string name="hint_monto_ventas">Ingrese monto de ventas</string>
     <string name="titulo_ejercicio_3">Ejercicio Nº 3</string>
     <string name="problema_ejercicio_3">Aplicación que permita calcular el sueldo de un obrero. Ingrese el nombre del obrero, horas trabajadas y tipo de actividad: \nActividades: \n Pintado = S/.10.00 por hora \n Laqueado = S/.12.00 por hora \n Barnizado = S/.14.00 por hora \nJornada semanal = 40 horas.\nPor cada hora extra se le pagara 30%.</string>
+    <string name="hint_nombre_obrero">Ingrese nombre del obrero</string>
+    <string name="hint_horas_trabajadas">Ingrese horas trabajadas</string>
+    <string name="checkbox_pintado">Pintado</string>
+    <string name="checkbox_laqueado">Laqueado</string>
+    <string name="checkbox_barnizado">Barnizado</string>
+    <string name="titulo_ejercicio_4">Ejercicio Nº 4</string>
+    <string name="problema_ejercicio_4">Aplicación que permita calcular el sueldo de un empleado. Ingrese el salario básico y el cargo. \nLeyenda:\n[B]Bonificación\n[A]Asignación\n[R]Refrigerio \nCargos: \nObrero = [B] S/.100; [A] S/.120. \nEmpleado = [B] S/.120; [A] S/.150 y [R] S/.200. \nEjecutivo = [B] S/.250; [R] S/.250 y [A] S/.500</string>
 </resources>

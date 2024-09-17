@@ -53,7 +53,7 @@
         android:id="@+id/etNombreObrero"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nombre del Obrero"
+        android:hint="@string/hint_nombre_obrero"
         app:layout_constraintTop_toBottomOf="@+id/tvSolucion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +64,7 @@
         android:id="@+id/etHorasTrabajadas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Horas Trabajadas"
+        android:hint="@string/hint_horas_trabajadas"
         android:inputType="number"
         app:layout_constraintTop_toBottomOf="@id/etNombreObrero"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,19 +85,19 @@
             android:id="@+id/rbPintado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pintado"/>
+            android:text="@string/checkbox_pintado"/>
 
         <RadioButton
             android:id="@+id/rbLaqueado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Laqueado"/>
+            android:text="@string/checkbox_laqueado"/>
 
         <RadioButton
             android:id="@+id/rbBarnizado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Barnizado"/>
+            android:text="@string/checkbox_barnizado"/>
     </RadioGroup>
 
     <!-- Button to calculate -->
@@ -105,7 +105,7 @@
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular"
+        android:text="@string/btn_calcular"
         app:layout_constraintTop_toBottomOf="@id/rgTipoActividad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +116,7 @@
         android:id="@+id/btnRegresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Regresar"
+        android:text="@string/btn_regresar"
         app:layout_constraintTop_toBottomOf="@id/btnCalcular"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
